@@ -1,0 +1,59 @@
+<b>A brief theorical introduction about full subtractor</b>
+
+<br>
+Full subtractor is based on a combinatory circuit, which is even simpler: the half subtractor. This circuit performs the
+subtraction of two bits which are the input, and that are the minuend and the subtrahend. Half subtractor circuit has as
+output, the result of the subtraction and a borrow (borrow-out)
+
+<center><img src="images/docs/subtractor1.png"></center>
+
+<br>
+This simple circuit is based on three logic gates: a XOR gate, a AND gate and a NOT gate. XOR calculates the subtraction, while
+NOT and AND gates perform the operation of determining borrow. For a short didactical introduction about these logic gates
+you can see the guide that you can find by clicking here.
+<br>
+Logic equations on which this circuit is based are:
+<br><br>
+<center><img src="images/docs/subtractor2.png"></center>
+<br><br>
+
+
+Table truth of the HS is the following:
+
+<br><br>
+<center><img src="images/docs/subtractor3.png"></center>
+<br><br>
+
+This simple circuit is good but not enough, because it is not able to considerate an outgoing borrow from another subtraction.
+Therefor is not sufficient, as a half adder is not sufficient to perform n bit sum. To solve this problem we can use more half
+subractor in such a way that we can consider even a borrow-in. Hence, we have another circuit named full subtractor, which
+you can see on this picture:
+
+<br><br>
+<center><img src="images/docs/subtractor4.png"></center>
+<br><br>
+
+As you can see this circuit uses two half subtractor. Logic equations on which the circuit is based are:
+
+<br><br>
+<center><img src="images/docs/subtractor5.png"></center>
+<br><br>
+
+The “!” symbol means logic negation, while “ ⊕ ” symbol means exclusive sum. “+” symbol means logic sum. “*” symbol means
+logic product. These operations are performed by NOT, XOR, AND gates. Table truth for this circuit is the following:
+
+<br><br>
+<center><img src="images/docs/subtractor6.png"></center>
+<br><br>
+
+<b>An interesting note::</b>
+<br><br>
+
+If we compare full adder table truth with the full subtractor’s one, we can notice something interesting:
+
+<br><br>
+<center><img src="images/docs/subtractor7.png"></center>
+<br><br>
+
+Table truth of full subtractor is almost the same as the full adder’s one except for C out /B out values.
+This is a good intuition to realize a combinatory circuit, which is able to perform both sum and subtraction.

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FullAdder">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Adder Simulator">
+    <meta name="author" content="Helias, Danilo Tascone">
+
+    <title>Circuit Simulator</title>
+
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/ui-bootstrap.min.js"></script>
+    <script src="js/lib/angular-ui-router.min.js"></script>
+    <script src="js/lib/loading-bar.min.js"></script>
+    <script src="js/app/Circuits.js"></script>
+    <script src="js/app/routes.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if IE]>
+<script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3" ng-controller="ModalController">
+          <div class="bg-panel-lateral">
+            <p class="h1 text-center">Circuit Simulator</p>
+            <br><br>
+            <div>
+              <a href="#/fulladder">
+                <h4 class="menu-title uppercase" OnClick="selected(this);">
+                  <span class="glyphicon glyphicon-menu-right"></span>
+                  &nbsp;
+                  Full Adder
+                </h4>
+              </a>
+            </div>
+            <div>
+              <a href="#/fulladder4bit">
+                <h4 class="menu-title uppercase" OnClick="selected(this);">
+                  <span class="glyphicon glyphicon-menu-right"></span>
+                  &nbsp;
+                  Full Adder 4 bit
+                </h4>
+              </a>
+            </div>
+            <div>
+              <a href="#/subtractor">
+                <h4 class="menu-title uppercase" OnClick="selected(this);">
+                  <span class="glyphicon glyphicon-menu-right"></span>
+                  &nbsp;
+                  Full Subtractor
+                </h4>
+              </a>
+            </div>
+            <div>
+              <a href="#/subtractor4bit">
+                <h4 class="menu-title uppercase" OnClick="selected(this);">
+                  <span class="glyphicon glyphicon-menu-right"></span>
+                  &nbsp;
+                  Full Subtractor 4 bit
+                </h4>
+              </a>
+            </div>
+            <div>
+              <h4 class="menu-title uppercase" ng-click="open('lg', 'partials/modal.html')" style="cursor: pointer;">
+                <span class="glyphicon glyphicon-info-sign"></span>
+                &nbsp;
+                {{ menu[lang] }}
+              </h4>
+            </div>
+            <div>
+              <h4 class="menu-title uppercase" ng-click="switchLang()" style="cursor: pointer;">
+                <img ng-src="images/lang/{{ language[lang] }}">
+                &nbsp;
+                {{ menu[lang+2] }}
+              </h4>
+            </div>
+            <br><br><br>
+            <p class="text-center">Coded by
+              <a target="_blank" href="https://github.com/Helias"><strong>Stefano Borzì</strong></a>
+              &&
+              <a target="_blank" href="#"><strong>Danilo Tascone</strong></a></p>
+          </div>
+        </div>
+        <div class="col-xs-9 main">
+          <br>
+          <div ui-view>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+<a target="_blank" href="https://github.com/Helias/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+-->
+  </body>
+</html>

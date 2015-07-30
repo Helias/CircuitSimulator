@@ -1,0 +1,71 @@
+<div class="bit">
+
+  <h1>Full Subtractor 4 bit</h1>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <input type="text" class="add" value="1111" OnKeyPress="return Key(event, this)" id="add1">
+      <h1 style="display: inline;">-</h1>
+      <input type="text" class="add" value="1010" OnKeyPress="return Key(event, this)" id="add2">
+
+      &nbsp;
+
+      <button class="btn-info btn-lg" id="start" OnClick="start4bit(1)">Start</button>
+      <label id="stepLabel">
+        <input type="checkbox" id="step">&nbsp;Step by step
+      </label>
+
+      <span id="backstep" style="display: none;">
+        <button class="btn-info btn-lg" OnClick="goStep4bit(1, 1);">Back step</button>
+      </span>
+
+      <h1 id="analizza" class="text-center"><br>&nbsp;<p style="height: 4px;"></p></h1>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+
+      <center>
+        <div class="image text-left">
+
+          <h2 class="member n1">&nbsp;</h2>
+          <h2 class="member n2">&nbsp;</h2>
+          <h2 class="member n3">&nbsp;</h2>
+          <h2 class="member n4">&nbsp;</h2>
+
+          <img id="Subtractor4bit" src="images/subtractor4bit/4BIT0.PNG">
+
+          <img id="overAdder" src="images/subtractor/000/animation.gif">
+
+          <br><br>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td><h3 class="lastcarry">&nbsp;</h3></td>
+              <td><h2 class="result">&nbsp;</h2></td>
+              <td><h2 class="result">&nbsp;</h2></td>
+              <td><h2 class="result">&nbsp;</h2></td>
+              <td><h2 class="result">&nbsp;</h2></td>
+            </tr>
+          </table>
+
+        </div>
+
+        <br><br>
+        <!--
+        <div class="docs">
+          <h1>Subtractor 4 bit</h1>
+          <p ng-bind-html="helpFA4[lang]" class="text-left"></p>
+        </div>
+        -->
+        <br><br><br><br><br><br><br>
+      </center>
+
+    </div>
+  </div>
+
+</div>

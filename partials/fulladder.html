@@ -1,0 +1,81 @@
+<div ng-controller="ModalController">
+  <h1>Full Adder <span ng-click="open('lg', 'partials/fulladderModal.html')" class="glyphicon glyphicon-question-sign scaling"></span><img src="images/docs/logic.png"><span ng-click="open('lg', 'partials/LogicGates.html')" class="glyphicon glyphicon-question-sign scaling"></span></h1>
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-2 text-center">
+
+    <h3>A: &nbsp;</h3>
+    <div>
+      <input type="text" class="add2" value="0" OnKeyPress="return Key(event, this)">
+      &nbsp;
+      <span class="glyphicon glyphicon-question-sign icon22" popover="{{ helpFA[lang][0] }}" popover-trigger="mouseenter"></span>
+    </div>
+
+    <h3>B: &nbsp;</h3>
+    <div>
+      <input type="text" class="add2" value="0" OnKeyPress="return Key(event, this)">
+      &nbsp;
+      <span class="glyphicon glyphicon-question-sign icon22" popover="{{ helpFA[lang][1] }}" popover-trigger="mouseenter"></span>
+    </div>
+
+    <h3>Cin: &nbsp;</h3>
+    <div>
+      <input type="text" class="add2" value="0" OnKeyPress="return Key(event, this)">
+      &nbsp;
+      <span class="glyphicon glyphicon-question-sign icon22" popover="{{ helpFA[lang][2] }}" popover-trigger="mouseenter"></span>
+    </div>
+
+  </div>
+  <div class="col-xs-10">
+
+    <br><br>
+
+    <div class="imager">
+      <img src="images/faddr/empty.png" alt="Full Adder Circuit" id="FullAdder" height="233" width="510">
+      <div class="xor1" popover="{{ helpXOR[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="xor2" popover="{{ helpXOR[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="and1" popover="{{ helpAND[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="and2" popover="{{ helpAND[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="or" popover="{{ helpOR[lang] }}" popover-trigger="mouseenter"></div>
+
+    </div>
+
+    <br>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+
+    <br><br>
+    <button class="btn-info btn-lg" OnClick="start()" id="start">Start</button>
+    <label id="stepLabel">
+      <input type="checkbox" id="step">&nbsp;Step by step
+    </label>
+    <span id="backstep" style="display: none;">
+      <button class="btn-info btn-lg" OnClick="goStep(1);">Back step</button>
+    </span>
+
+  </div>
+  <div class="col-xs-9 text-left" id="ngSteps">
+
+    <b ng-bind-html="step[lang][indexStep]"></b>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <br><br>
+    <div class="docs text-left">
+      <h1>FullAdder</h1>
+      <br>
+      <p ng-bind-html="helpFAdocs[lang]"></p>
+      <br><br>
+      <center>
+        <img src="images/docs/FullAdder Table.png">
+      </center>
+      <br>
+    </div>
+  </div>
+</div>

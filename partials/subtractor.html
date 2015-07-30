@@ -1,0 +1,85 @@
+<div ng-controller="ModalController">
+  <h1>Full Subtractor <span ng-click="open('lg', 'partials/subtractorModal.html')" class="glyphicon glyphicon-question-sign scaling"></span> <img src="images/docs/logic.png"><span ng-click="open('lg', 'partials/LogicGates.html')" class="glyphicon glyphicon-question-sign scaling"></span></h1>
+  
+  <h1 style="display: inline-block; float: right;"></h1>
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-2 text-center">
+
+    <h3>A: &nbsp;</h3>
+    <div>
+      <input type="text" class="add2" value="0" OnKeyPress="return Key(event, this)">
+      &nbsp;
+      <span class="glyphicon glyphicon-question-sign icon22" popover="{{ helpFA[lang][0] }}" popover-trigger="mouseenter"></span>
+    </div>
+
+    <h3>B: &nbsp;</h3>
+    <div>
+      <input type="text" class="add2" value="0" OnKeyPress="return Key(event, this)">
+      &nbsp;
+      <span class="glyphicon glyphicon-question-sign icon22" popover="{{ helpFA[lang][1] }}" popover-trigger="mouseenter"></span>
+    </div>
+
+    <h3>Bin: &nbsp;</h3>
+    <div>
+      <input type="text" class="add2" value="0" OnKeyPress="return Key(event, this)">
+      &nbsp;
+      <span class="glyphicon glyphicon-question-sign icon22" popover="{{ helpFA[lang][2] }}" popover-trigger="mouseenter"></span>
+    </div>
+
+  </div>
+  <div class="col-xs-10">
+
+    <br><br>
+
+    <div class="imager">
+      <img src="images/subtractor/empty.png" alt="Full Adder Circuit" id="Subtractor" height="233" width="510">
+      <div class="xor1" popover="{{ helpXOR[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="xor2" popover="{{ helpXOR[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="and1" popover="{{ helpAND[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="and2" popover="{{ helpAND[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="or" popover="{{ helpOR[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="not1" popover="{{ helpNOT[lang] }}" popover-trigger="mouseenter"></div>
+      <div class="not2" popover="{{ helpNOT[lang] }}" popover-trigger="mouseenter"></div>
+
+    </div>
+
+    <br>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+
+    <br><br>
+    <button class="btn-info btn-lg" OnClick="start(1)" id="start">Start</button>
+    <label id="stepLabel">
+      <input type="checkbox" id="step">&nbsp;Step by step
+    </label>
+    <span id="backstep" style="display: none;">
+      <button class="btn-info btn-lg" OnClick="goStep(1, 1);">Back step</button>
+    </span>
+
+  </div>
+  <div class="col-xs-9 text-left" id="ngSteps">
+
+    <b ng-bind-html="SubtractorStep[lang][indexStep]"></b>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <br><br>
+    <div class="docs text-left">
+      <h1>Subtractor</h1>
+      <br>
+      <p ng-bind-html="helpSADocs[lang]"></p>
+      <br><br>
+      <center>
+        <img src="images/docs/subtractor6.png">
+      </center>
+      <br>
+    </div>
+  </div>
+</div>

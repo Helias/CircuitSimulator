@@ -1,0 +1,53 @@
+<b>Una breve premessa teorica al full subtractor</b>
+
+<br>
+Il full subtractor si basa innanzitutto su un circuito combinatorio ancora più semplice, l'half subtractor. Tale circuito esegue la sottrazione di due bit che vengono presi come input e che costituiscono il minuendo ed il sottraendo. Il circuito half subtractor ha come output il risultato della sottrazione e l'eventuale prestito Bout (borrow-out). 
+
+<center><img src="images/docs/subtractor1.png"></center>
+
+<br>
+Questo semplice circuito &egrave; composto da tre porte logiche: una porta XOR, una AND e una NOT. La porta XOR calcola la differenza, mentre la parte riguardante la porta NOT e la porta AND calcola l'eventuale prestito da fare per effettuare la differenza. 
+<br>
+Per una breve premessa didattica su queste porte logiche si veda la breve guida qui.
+<br>
+Le equazioni logiche su cui si basa tale circuito sono le seguenti:
+<br><br>
+<center><img src="images/docs/subtractor2.png"></center>
+<br><br>
+
+
+La tabella di verit&agrave; dell'HS &egrave; la seguente:
+
+<br><br>
+<center><img src="images/docs/subtractor3.png"></center>
+<br><br>
+
+L’inconveniente di questo circuito semplice è che, da solo, non è in grado di tenere in considerazione un eventuale prestito in entrata da sottrarre e pertanto si rivela insufficiente, come d’altronde si rileva insufficiente un semplice half adder. Per risolvere tale problema non si fa altro che utilizzare più half-subtractor, in modo da prendere in considerazione anche il borrow-in o prestito in entrata. Nasce così il full subtractor che è possibile visualizzare in figura:  
+
+<br><br>
+<center><img src="images/docs/subtractor4.png"></center>
+<br><br>
+
+Come è possibile osservare tale circuito si serve di due half subtractor uno dopo l’altro. Le equazioni logiche su cui si basa tale circuito sono le seguenti: 
+
+<br><br>
+<center><img src="images/docs/subtractor5.png"></center>
+<br><br>
+
+Il simbolo “!” indica la negazione logica, mentre il simbolo “⊕” indica la somma esclusiva. Il simbolo “+” indica la somma logica. Il simbolo “*” indica il prodotto logico. Queste sono le operazioni eseguite rispettivamente dalla porta NOT, dalla porta XOR, dalla porta OR e dalla porta AND.  La tabella di verità di tale circuito è la seguente: 
+
+<br><br>
+<center><img src="images/docs/subtractor6.png"></center>
+<br><br>
+
+<b>Osservazione:</b>
+<br><br>
+
+Se si confronta la tabella di verità del full adder con quella del full subtractor si può notare qualcosa di interessante:
+
+<br><br>
+<center><img src="images/docs/subtractor7.png"></center>
+<br><br>
+
+La tabella di verità del full subtractor è praticamente identica a quella del full adder eccetto per i valori di Cout/Bout.
+Questo costituisce una buona intuizione per la realizzazione di un circuito che sia in grado di eseguire sia la somma che la sottrazione. 
